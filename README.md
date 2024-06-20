@@ -1,0 +1,2 @@
+# Typescript Chrome Extension Starter
+

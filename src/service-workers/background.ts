@@ -1,0 +1,1 @@
+// The service worker is ideal for background tasks that need to be persistent, event-driven, or asynchronous

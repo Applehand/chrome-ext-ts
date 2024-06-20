@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Extension Starter with Typescript",
+  "description": "A starter template for creating an SEO meta chrome extension clone (and more).",
+  "version": "1.0.0",
+  "action": {
+    "default_icon": "applehands.png",
+    "default_popup": "popup/pop.html"
+  },
+  "background": {
+    "service_worker": "src/service-workers/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content-scripts/onpage-script.js"]
+    }
+  ],
+  "permissions": ["scripting", "activeTab", "webRequest"],
+  "host_permissions": ["*://*.google.com/*"]
+}
