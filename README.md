@@ -1,2 +1,4 @@
-# Typescript Chrome Extension Starter
+# SEO Chrome Extension with Typescript
+
+
 
