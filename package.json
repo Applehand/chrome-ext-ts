@@ -27,7 +27,11 @@
     "clean": "rm -rf dist",
     "compile": "npx tsc",
     "copy-assets": "rsync -av --exclude 'tsconfig.json' --exclude 'src' --exclude 'dist' ./ dist/",
-    "build": "npm run clean && npm run compile && npm run copy-assets"
+    "build": "npm run clean && npm run compile && npm run copy-assets",
+    "clean-ps": "powershell -Command \"Remove-Item -Recurse -Force dist\"",
+    "compile-ps": "powershell -Command \"npx tsc\"",
+    "copy-assets-ps": "powershell -Command \"robocopy . dist /MIR /XD tsconfig.json src dist\"",
+    "build-ps": "powershell -Command \"npm run clean-ps; npm run compile-ps; npm run copy-assets-ps\""
   },
   "devDependencies": {
     "@types/chrome": "^0.0.268",
