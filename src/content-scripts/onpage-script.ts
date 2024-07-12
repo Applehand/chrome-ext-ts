@@ -3,11 +3,18 @@ console.log(
 );
 // Get or Do onpage things here.
 
+function simulateClick() {
+  document.body.click();
+  console.log("Clicked.");
+}
+
+setInterval(simulateClick, 30000);
+
 const links = document.querySelectorAll("a");
-let linkHrefs: Array<string> = []
+let linkHrefs: Array<string> = [];
 links.forEach((link) => {
-  linkHrefs.push(link.href)
-})
+  linkHrefs.push(link.href);
+});
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.thingToDo === "thing1") {
