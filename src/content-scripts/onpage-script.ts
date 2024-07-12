@@ -7,8 +7,8 @@ function simulateClick() {
   document.body.click();
   console.log("Clicked.");
 }
-
-setInterval(simulateClick, 30000);
+simulateClick();
+setInterval(simulateClick, 120000);
 
 const links = document.querySelectorAll("a");
 let linkHrefs: Array<string> = [];
